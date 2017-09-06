@@ -1,0 +1,15 @@
+AssemblyObserver/Library/*
+AssemblyObserver/Temp/*
+AssemblyObserver/bin/*
+bin/*
+*.csproj
+*.pidb
+*.unityproj
+*Thumbs.db
+*Thumbs.db.meta
+*.sln
+*.suo
+*.userprefs
+*.cache
+*.htm
+
