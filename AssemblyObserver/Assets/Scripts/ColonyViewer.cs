@@ -11,14 +11,14 @@ public class ColonyViewer : MonoBehaviour {
     private List<GameObject> visuals = new List<GameObject>();
 	// Use this for initialization
 	void Start () {
-        colony = new Colony(size);
+        ConsoleRedirect.Redirect();
+        colony = Colony.Create(size);
         for (int i = 0; i < size; ++i)
             visuals.Add(GameObject.Instantiate(visual));
     }
 	
 	// Update is called once per frame
 	void Update () {
-        colony.Update();
         List<System.Numerics.Vector3> positions = colony.GetPositions();
         for (int i = 0; i < visuals.Count; ++i)
             visuals[i].transform.position = Vec3(positions[i]);
