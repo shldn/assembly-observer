@@ -29,10 +29,23 @@ public class ColonyViewer : MonoBehaviour {
 
     void OnAssemblyCreation(Assembly.Assembly assembly)
     {
-        visuals.Add(assembly.id, GameObject.Instantiate(visual));
+        GameObject assemblyObj = new GameObject("Assembly-" + assembly.id);
+        assemblyObj.transform.position = Vec3(assembly.position);
+        for (int i = 0; i < assembly.nodes.Count; ++i) {
+            GameObject node = GameObject.Instantiate(visual, assemblyObj.transform);
+            node.transform.localPosition = Vec3(assembly.nodes[i].localHexPos);
+        }
+
+        visuals.Add(assembly.id, assemblyObj);
     }
 
     Vector3 Vec3(System.Numerics.Vector3 v) {
         return new Vector3(v.X, v.Y, v.Z);
     }
+
+    Vector3 Vec3(Triplet v)
+    {
+        return new Vector3(v.x, v.y, v.z);
+    }
+
 }
