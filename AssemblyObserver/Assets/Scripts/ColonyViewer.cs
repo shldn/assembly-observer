@@ -8,6 +8,7 @@ public class ColonyViewer : MonoBehaviour {
 
     public int size = 10;
     public GameObject visual = null;
+    public float speed = 0.001f;
     private Colony colony = null;
     private Dictionary<int, GameObject> visuals = new Dictionary<int, GameObject>();
 	
@@ -27,6 +28,7 @@ public class ColonyViewer : MonoBehaviour {
 				Debug.DrawRay(visual.transform.position, visual.transform.forward * 100f);
 			}
         }
+        colony.speed = speed;
 	}
 
     void OnAssemblyCreation(Assembly.Assembly assembly)
