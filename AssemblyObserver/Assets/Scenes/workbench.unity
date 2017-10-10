@@ -255,8 +255,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 963047571}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.020357842, y: -0.95084345, z: 0.30229497, w: -0.0640313}
+  m_LocalPosition: {x: -4.558487, y: 26.680397, z: 35.331097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -290,7 +290,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 10
-  visual: {fileID: 1714746512278038, guid: 3b89aa0911966a74e83aab1ffd696b6a, type: 2}
+  nodeVisual: {fileID: 1714746512278038, guid: 3b89aa0911966a74e83aab1ffd696b6a, type: 2}
+  basicNodeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  detectorNodeColor: {r: 0.603, g: 1, b: 0.603, a: 1}
+  processorNodeColor: {r: 0.49699998, g: 0.49699998, b: 1, a: 1}
+  motorNodeColor: {r: 1, g: 0.49699998, b: 0.49699998, a: 1}
 --- !u!4 &1355663612
 Transform:
   m_ObjectHideFlags: 0
